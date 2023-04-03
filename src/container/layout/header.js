@@ -1,5 +1,6 @@
-import { MenuHamburger } from "react-swm-icon-pack";
-import { ArrowSmallRight, Bell, Search } from "react-swm-icon-pack/dist/Icons";
+import { HiOutlineBell ,HiBars3 , HiMagnifyingGlass } from "react-icons/hi2";
+import { BsArrowRightShort } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
 const Header = () => {
   return (
     <header className="p-4 rounded-b-3xl shadow-md shadow-slate-800  bg-slate-800 w-full flex flex-col gap-y-4">
@@ -18,41 +19,31 @@ const Header = () => {
                 alt="Waving Hand on Microsoft Teams 1.0"
                 width="26"
                 height="26"
-              ></img>
+               />
             </div>
           </div>
         </div>
         <div className="flex items-center gap-x-3">
-          <button className="flex relative text-sm w-9 h-9 items-center justify-center p-1 rounded-full text-slate-100  bg-slate-700">
-            <Bell color="#cbd5e1" size={24} strokeWidth="1.8" set="curved" />
+          <button className="flex relative stroke-2 w-9 h-9 items-center justify-center p-1 rounded-full text-slate-100  bg-slate-700">
+            <HiOutlineBell className="text-2xl"/>    
             <span className="absolute w-2 h-2 rounded-full bg-violet-700 right-2 top-2"></span>
           </button>
-          <button className="flex text-sm w-9 h-9 items-center justify-center rounded-full text-slate-100  bg-slate-700">
-            <MenuHamburger
-              color="#cbd5e1"
-              strokeWidth="2"
-              size={24}
-              set="curved"
-            />
+          <button className="flex stroke-2 w-9 h-9 items-center justify-center rounded-full text-slate-100  bg-slate-700">
+            <HiBars3 className="text-xl"/>
           </button>
         </div>
       </div>
       <div className="mt-2 px-1">
-        <div className="p-[6px] flex items-center gap-x-4 justify-between rounded-lg bg-slate-700">
-          <Search color="#cbd5e1" strokeWidth="2" size={22} set="curved" />
+        <div className="p-[6px] flex text-slate-300  items-center gap-x-4 justify-between rounded-lg bg-slate-700">
+          <CiSearch className="text-xl stroke-1" />
           <input
             type="text"
             placeholder="search ..."
             className="flex-1 bg-transparent outline-none border-none font-semibold text-slate-300 placeholder:text-slate-300 "
           />
           <button className="p-1 group transition-all ease-in-out duration-300 rounded-lg   bg-slate-500 flex items-center rounded-lg` justify-center text-slate-200">
-            <span className="translate-x-0 group-hover:translate-x-1 transition-all ease-in-out duration-300">
-              <ArrowSmallRight
-                strokeWidth="2"
-                color="#e2e8f0"
-                size={22}
-                set="curved"
-              />
+            <span className="translate-x-0 text-xl stroke-2 group-hover:translate-x-1 transition-all ease-in-out duration-300">
+              <BsArrowRightShort />
             </span>
           </button>
         </div>

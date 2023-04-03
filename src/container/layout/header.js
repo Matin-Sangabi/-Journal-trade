@@ -1,4 +1,4 @@
-import { HiOutlineBell ,HiBars3 , HiMagnifyingGlass } from "react-icons/hi2";
+import { HiOutlineBell, HiBars3, HiMagnifyingGlass } from "react-icons/hi2";
 import { BsArrowRightShort } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 const Header = () => {
@@ -15,21 +15,21 @@ const Header = () => {
               <h1 className="text-xl font-bold text-white">Matin ! </h1>
               <img
                 src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_1f44b.png"
-                srcset="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_1f44b.png 2x"
+                srcSet="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_1f44b.png 2x"
                 alt="Waving Hand on Microsoft Teams 1.0"
                 width="26"
                 height="26"
-               />
+              />
             </div>
           </div>
         </div>
         <div className="flex items-center gap-x-3">
           <button className="flex relative stroke-2 w-9 h-9 items-center justify-center p-1 rounded-full text-slate-100  bg-slate-700">
-            <HiOutlineBell className="text-2xl"/>    
+            <HiOutlineBell className="text-2xl" />
             <span className="absolute w-2 h-2 rounded-full bg-violet-700 right-2 top-2"></span>
           </button>
           <button className="flex stroke-2 w-9 h-9 items-center justify-center rounded-full text-slate-100  bg-slate-700">
-            <HiBars3 className="text-xl"/>
+            <HiBars3 className="text-xl" />
           </button>
         </div>
       </div>

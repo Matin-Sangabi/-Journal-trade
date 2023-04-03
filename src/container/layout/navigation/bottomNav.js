@@ -20,7 +20,7 @@ const BottomNav = () => {
             return (
               <Link
                 href={navigate.path}
-                className="w-14 h-14 relative bottom-7 flex items-center justify-center text-3xl  rounded-full bg-violet-700 text-slate-100 hover:rotate-180 transition-all ease-in-out duration-300"
+                className="w-12 h-12 relative bottom-7 flex items-center justify-center text-3xl  rounded-full bg-violet-700 text-slate-100 hover:rotate-180 transition-all ease-in-out duration-300"
                 key={i}
               >
                 {navigate.icon()}

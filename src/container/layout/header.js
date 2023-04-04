@@ -8,7 +8,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
 const Header = () => {
-  const [openHeader, setOpenMenu] = useState(true);
+  const [openHeader, setOpenMenu] = useState(false);
   let touchCounter = 0;
   const touchHandler = (e) => {
     touchCounter += 1;
@@ -29,7 +29,9 @@ const Header = () => {
             className={`${
               openHeader ? "w-10 h-10" : "w-14 h-14"
             } rounded-full flex items-center justify-center bg-slate-600 transition-all ease-in-out duration-300`}
-          ></span>
+          >
+            <img src={"/images/profile/Ellipse 56.png"} alt="profile" />
+          </span>
           <div className={`${openHeader ? "" : "flex flex-col gap-0"}`}>
             <span
               className={`${

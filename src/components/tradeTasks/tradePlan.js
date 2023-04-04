@@ -45,9 +45,9 @@ const TradePlan = () => {
               </div>
               <div className="flex flex-col ">
                 <span className="font-bold text-slate-800 text-sm ">8 jan</span>
-                <spnn className="text-xs text-slate-500 font-semibold ">
+                <span className="text-xs text-slate-500 font-semibold ">
                   Task Date
-                </spnn>
+                </span>
               </div>
             </div>
             <div className="flex gap-x-2">
@@ -56,9 +56,9 @@ const TradePlan = () => {
               </div>
               <div className="flex flex-col ">
                 <span className="font-bold text-slate-800 text-sm ">4 pm</span>
-                <spnn className="text-xs text-slate-500 font-semibold ">
+                <span className="text-xs text-slate-500 font-semibold ">
                   Task Time
-                </spnn>
+                </span>
               </div>
             </div>
             <div className="flex gap-x-2">
@@ -67,9 +67,9 @@ const TradePlan = () => {
               </div>
               <div className="flex flex-col ">
                 <span className="font-bold text-slate-800 text-sm">Buy</span>
-                <spnn className="text-xs text-slate-500 font-semibold ">
+                <span className="text-xs text-slate-500 font-semibold ">
                   Task plan
-                </spnn>
+                </span>
               </div>
             </div>
           </div>

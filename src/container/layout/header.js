@@ -87,13 +87,13 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <span
+      <button
         className={`w-20 h-[2px] bg-slate-100 absolute bottom-0 left-[40%] ${
           openHeader ? "hidden" : ""
         }`}
         onTouchMove={touchHandler}
         onTouchStart={() => (touchCounter = 0)}
-      ></span>
+      ></button>
       <span
         onClick={() => setOpenMenu(false)}
         className={`${

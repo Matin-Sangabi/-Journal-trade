@@ -9,9 +9,9 @@ import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
 const Header = () => {
   const [openHeader, setOpenMenu] = useState(false);
-  let touchCounter = 0;
+  const [touchCounter, setTochCounter] = useState(0);
   const touchHandler = (e) => {
-    touchCounter += 1;
+    setTochCounter((c) => c + 1);
     if (touchCounter >= 50) {
       setOpenMenu(true);
       return;
@@ -21,7 +21,7 @@ const Header = () => {
     <header
       className={`${
         openHeader ? "p-2" : "p-4"
-      } transition-all ease-in-out duration-300 rounded-b-3xl relative shadow-md shadow-slate-800  bg-slate-800 w-full flex flex-col gap-y-4`}
+      } transition-all  ease-in-out duration-300 rounded-b-3xl relative shadow-md shadow-slate-800  bg-slate-800 w-full flex flex-col gap-y-4`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2">
@@ -92,7 +92,7 @@ const Header = () => {
           openHeader ? "hidden" : ""
         }`}
         onTouchMove={touchHandler}
-        onTouchStart={() => (touchCounter = 0)}
+        onTouchStart={() => (setTochCounter(0))}
       ></button>
       <span
         onClick={() => setOpenMenu(false)}

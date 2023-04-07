@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const navigation = [
   { name: "home", icon: () => HiOutlineHome(), path: "/" },
   { name: "wallet", icon: () => SlWallet(), path: "/wallet" },
-  { name: "plus", icon: () => RiAddFill(), path: "/add" },
+  { name: "plus", icon: () => RiAddFill(), path: "/AddJournal" },
   { name: "trade", icon: () => RiBarChartGroupedFill(), path: "/trade" },
   { name: "users", icon: () => RiUser6Line(), path: "/profile" },
 ];

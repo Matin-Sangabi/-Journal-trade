@@ -1,3 +1,4 @@
+import { HiOutlineArrowRight } from "react-icons/hi2";
 import PairInputs from "src/components/formActions/PairInputs";
 import ChoosePlan from "src/components/formActions/choosePlan";
 
@@ -28,6 +29,14 @@ const AddJournal = () => {
           </div>
         </div>
         <ChoosePlan />
+        <div className="flex items-center w-full my-4 px-4 ">
+          <button className="p-2 w-full  bg-slate-800 text-sm hover:shadow-xl hover:shadow-slate-400   rounded-lg flex items-center justify-center gap-x-2 group text-white transition-all ease-in-out duration-300">
+            <span>Generate My Task</span>
+            <span className="group-hover:translate-x-4 translate-x-0  transition-all ease-in-out duration-300">
+              <HiOutlineArrowRight />
+            </span>
+          </button>
+        </div>
       </div>
     </>
   );

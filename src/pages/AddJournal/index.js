@@ -1,10 +1,7 @@
-
 import PairInputs from "src/components/formActions/PairInputs";
 import ChoosePlan from "src/components/formActions/choosePlan";
 
-
 const AddJournal = () => {
- 
   return (
     <>
       <div className="max-w-screen-sm px-4 mx-auto">
@@ -25,7 +22,7 @@ const AddJournal = () => {
         </div>
         <div className="flex flex-col gap-y-2 mt-10 ">
           <h1 className="text-slate-800  font-bold">Pair</h1>
-          <div className="flex items-center w-full gap-x-2 ">
+          <div className="flex items-center  gap-x-2 ">
             <PairInputs name={"from"} />
             <PairInputs name={"to"} />
           </div>
@@ -37,4 +34,3 @@ const AddJournal = () => {
 };
 
 export default AddJournal;
-

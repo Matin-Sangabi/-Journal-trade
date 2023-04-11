@@ -2,7 +2,7 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
 // import VolumeUp from "@mui/icons-material/VolumeUp";
@@ -41,37 +41,29 @@ export default function InputSlider({ rangeSlide, setRangeSlide }) {
             step={10}
             min={0}
             max={100}
-            slotProps={{
-              rail: {
-                className: "bg-violet-300 py-[3px]",
+            sx={{
+              color: "#a78bfa",
+              "& .MuiSlider-valueLabel": {
+                color: "#4c1d95",
+                background: "#ddd6fe",
+                fontWeight: "700",
+                borderRadius: "24px",
               },
-              mark: {
-                className: "bg-violet-400 w-[3px]",
-              },
-              track: {
-                className: "bg-violet-400 border-violet-400 py-[2px]",
-              },
-              thumb: {
-                className: "bg-violet-400 ",
-              },
-              valueLabel : {
-                className :'bg-violet-200 border-1 text-sm rounded-full text-violet-800 font-bold'
-              }
             }}
           />
         </Grid>
         <Grid item>
           <Input
             value={rangeSlide}
-            slotProps={{
-              input: {
-                className: "text-violet-600 font-bold ",
-              },
-              root: {
-                className:
-                  "border-violet-400 before:border-violet-400 after:border-violet-600",
+            sx={{
+              color: "#7c3aed",
+              fontWeight: "bold",
+              "& .MuiGrid-root::after": {
+                content: '""',
+                borderBottom: "2px solid #a78bfa ",
               },
             }}
+           
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{

@@ -14,7 +14,7 @@ const BottomNav = () => {
   const router = useRouter();
   return (
     <nav className="block p-3 fixed md:hidden bottom-0 left-0 z-50 w-full">
-      <div className="flex items-center  justify-between bg-gray-50 shadow-xl py-3 px-2 rounded-3xl">
+      <div className="flex items-center  justify-between bg-gray-50 shadow-xl py-2 px-2 rounded-3xl">
         {navigation.map((navigate, i) => {
           if (i === 2) {
             return (

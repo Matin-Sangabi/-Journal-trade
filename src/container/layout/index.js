@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {(router.pathname === "/" || router.pathname === "/wallet") && <Header />}
-      <div className="max-w-screen-xl px-4 mt-4">{children}</div>
+      <div className="max-w-screen-xl px-4 mt-4 overflow-hidden">{children}</div>
       <BottomNav />
     </>
   );

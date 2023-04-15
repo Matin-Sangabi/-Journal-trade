@@ -53,6 +53,7 @@ export default function InputSlider({ rangeSlide, setRangeSlide }) {
           />
         </Grid>
         <Grid item>
+        
           <Input
             value={rangeSlide}
             sx={{
@@ -74,6 +75,7 @@ export default function InputSlider({ rangeSlide, setRangeSlide }) {
               "aria-labelledby": "input-slider",
             }}
           />
+          
         </Grid>
       </Grid>
     </Box>

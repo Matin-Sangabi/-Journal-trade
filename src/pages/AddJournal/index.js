@@ -3,21 +3,44 @@ import { HiOutlineArrowRight } from "react-icons/hi2";
 import PairInputs from "src/components/formActions/PairInputs";
 import ChoosePlan from "src/components/formActions/choosePlan";
 import GenerateTask from "src/components/formActions/generateTask";
+import SlIcon from "src/components/icons/sl";
+import TPIcon from "src/components/icons/tp";
 import BottomNav from "src/container/layout/navigation/bottomNav";
-
+const SelectOrder = [
+  {
+    id: 1,
+    name: "Tp",
+    icon: () => TPIcon(),
+    child : [{order : '' , desc : ''}]
+  },
+  {
+    id: 2,
+    name: "SL",
+    icon: () => SlIcon(),
+    child : [{order : '' , desc : ''}]
+  },
+];
 const AddJournal = () => {
   const [openGenerateTask, setOpenGenerateTask] = useState(false);
+  const [tpSl, setTpSl] = useState({
+    id: 0,
+  });
   return (
     <>
       <div
-        className={`w-full h-full bg-violet-50 z-50 block absolute left-0 top-0   overflow-y-hidden ${
+        className={`w-full h-full  bg-violet-50 z-50 block absolute left-0 top-0  ${
           openGenerateTask
             ? "translate-y-0 block"
             : "-translate-y-full invisible"
         } transition-all ease-out delay-500 duration-300`}
       >
-        <GenerateTask setOpenGenerateTask = {setOpenGenerateTask} />
-        <BottomNav />
+        <GenerateTask
+          SelectOrder={SelectOrder}
+          tpSl={tpSl}
+          setTpSl={setTpSl}
+          setOpenGenerateTask={setOpenGenerateTask}
+        />
+        {/* <BottomNav /> */}
       </div>
       <div
         className={`${

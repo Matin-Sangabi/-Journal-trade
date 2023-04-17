@@ -45,10 +45,35 @@ const GenerateTask = ({ setOpenGenerateTask, tpSl, setTpSl, SelectOrder }) => {
   return (
     <>
       <WeekDate setOpenGenerateTask={setOpenGenerateTask} />
-      <div className="flex flex-col gap-y-4 mt-3 max-w-screen-lg px-4 pb-10 ">
-        <div>
-          <h1 className="text-slate-800 font-bold tracking-wide ">Task Form</h1>
-          <div className="p-2 flex flex-col gap-2 bg-indigo-50 rounded-3xl shadow ">
+      <div className="flex flex-col gap-y-4 mt-3 max-w-screen-lg px-4  overflow-hidden ">
+        <div className="flex items-center justify-between">
+          <h1
+            className={`${
+              !toggleForm
+                ? "text-indigo-400 text-xs hover:underline  "
+                : "text-slate-800"
+            } font-bold tracking-wide transition-all ease-in-out duration-300 `}
+            onClick={() => setToggleForm(!toggleForm)}
+          >
+            Task Form
+          </h1>
+          <h1
+            className={`${
+              toggleForm
+                ? "text-indigo-400 text-xs hover:underline "
+                : "text-slate-800 text-base"
+            }  transition-all ease-in-out duration-300 font-bold tracking-wide `}
+            onClick={() => setToggleForm(!toggleForm)}
+          >
+            upload a File
+          </h1>
+        </div>
+        <div className="relative">
+          <div
+            className={`p-2  flex flex-col gap-2 bg-indigo-50 rounded-3xl shadow transition-all ease-in-out duration-500 ${
+              toggleForm ? "-translate-x-[120%]" : "translate-x-0"
+            }`}
+          >
             <FormHeader title={"Transaction"} />
             <div className="flex flex-col gap-y-2">
               <div className="flex flex-col gap-2 px-4 text-xs font-semibold">
@@ -76,11 +101,16 @@ const GenerateTask = ({ setOpenGenerateTask, tpSl, setTpSl, SelectOrder }) => {
               />
             </div>
           </div>
+          <div
+            className={`${
+              toggleForm
+                ? "translate-x-0 absolute top-0 mt-4"
+                : "translate-x-[120%]"
+            } transition-all ease-in-out duration-500 w-full`}
+          >
+            <UploadDataForm />
+          </div>
         </div>
-        <h1 className="text-slate-800 font-bold tracking-wide ">
-          upload a File
-        </h1>
-        <UploadDataForm />
       </div>
     </>
   );

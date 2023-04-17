@@ -21,7 +21,7 @@ const Header = () => {
     <header
       className={`${
         openHeader ? "p-2" : "p-4"
-      } transition-all  ease-in-out duration-300 rounded-b-3xl relative shadow-md shadow-slate-800  bg-slate-800 w-full flex flex-col gap-y-4`}
+      } transition-all  md:hidden ease-in-out duration-300 rounded-b-3xl relative shadow-md shadow-slate-800  bg-slate-800 w-full flex flex-col gap-y-4`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2">

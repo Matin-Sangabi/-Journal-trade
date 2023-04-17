@@ -8,7 +8,8 @@ import { RiAddLine } from "react-icons/ri";
 import TradeDesc from "./tradeDesc";
 const TradePlan = () => {
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2 ">
+      <h1 className="text-2xl text-slate-800 text-center">THis app building ...</h1>
       <TradeDesc title={'Trade'} path={"/"}/>
       <div className="mx-1 py-2 px-2 flex flex-col gap-y-4 bg-indigo-50 rounded-xl shadow-xl">
         <div className="flex items-center justify-between">

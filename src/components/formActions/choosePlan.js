@@ -1,9 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
+import { useState } from "react";
 import Feature from "src/components/icons/Feature";
 import Spot from "src/components/icons/Spot";
 import SelectPlan from "../plans/selectPlan";
-import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
+
 import InputSlider from "./inputSlide";
 const plans = [
   {

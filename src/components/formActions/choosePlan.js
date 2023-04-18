@@ -16,30 +16,13 @@ const plans = [
   },
   { id: 1, name: "Spot", icon: () => Spot(), related: [] },
 ];
-const ChoosePlan = () => {
-  const [selectPlan, setSelectPlan] = useState({
-    name: "",
-    icon: "",
-    related: [],
-    id: -1,
-  });
-  const [selectRelated, setSelectRelated] = useState({
-    name: "",
-    icon: "",
-    id: -1,
-  });
-  const [rangeSlide, setRangeSlide] = useState(0);
-  const planClickHandler = (plan, type) => {
-    switch (type) {
-      case "plan": {
-        setSelectPlan(plan);
-        break;
-      }
-      case "related": {
-        setSelectRelated(plan);
-      }
-    }
-  };
+const ChoosePlan = ({
+  selectPlan,
+  onClick,
+  rangeSlide,
+  setRangeSlide,
+  selectRelated,
+}) => {
   return (
     <div className="flex flex-col gap-y-4 mt-10 overflow-x-hidden">
       <h1 className="text-slate-800  font-bold"> Transaction type</h1>
@@ -47,7 +30,7 @@ const ChoosePlan = () => {
         <SelectPlan
           plans={plans}
           selectPlan={selectPlan}
-          onClick={planClickHandler}
+          onClick={onClick}
           type={"plan"}
         />
       </div>
@@ -62,7 +45,7 @@ const ChoosePlan = () => {
           <SelectPlan
             plans={selectPlan.related}
             selectPlan={selectRelated}
-            onClick={planClickHandler}
+            onClick={onClick}
             type={"related"}
           />
         </div>

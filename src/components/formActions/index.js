@@ -12,6 +12,8 @@ const Forms = ({
   TPState,
   onChange,
   onDecHandler,
+  onInput,
+  inputValue,
 }) => {
   return (
     <form>
@@ -19,17 +21,21 @@ const Forms = ({
         <FormHeader title={"Coins"} />
         <div className="flex flex-col w-full px-2 gap-y-2">
           <CoinsActions
-            name={"coin price"}
+            name={"coinPrice"}
             placeHolder={"45.22 $"}
             isSmall={true}
+            onInput={onInput}
+            inputValue={inputValue.coinPrice}
           />
         </div>
         <FormHeader title={"Margin"} />
         <div className="flex flex-col w-full px-2 gap-y-2">
           <CoinsActions
-            name={"margin price"}
+            name={"marginPrice"}
             placeHolder={"80.22 $"}
             isSmall={true}
+            onInput={onInput}
+            inputValue={inputValue.marginPrice}
           />
         </div>
       </div>
